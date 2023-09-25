@@ -1,5 +1,8 @@
-export default function ButtonBar() {
+export default function ButtonBar(props) {
     return (
-        <h1>ButtonBar</h1>
+        <div>
+            <button onClick={() => props.setPokemonId(props.pokemonId - 1)}>Back</button>
+            <button onClick={() => props.setPokemonId(props.pokemonId + 1)}>Next</button>
+        </div>
     )
 }
